@@ -1,0 +1,60 @@
+.average_text span {
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  color: #8f8e8e;
+}
+
+.btn-secondary{
+    border:none;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 8px;
+    outline: none;
+    background-color: #2E3241;
+}
+
+.average_header_main_text {
+  padding-top: 25px;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.color_green {
+  color: #5dc7c2;
+}
+.time {
+  color: #8f8e8e;
+  font-size: 20px;
+}
+
+.average_heading {
+  font-weight: 400;
+  font-size: 80px;
+}
+
+.banner_box img {
+  margin-top:10px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .average_text span {
+    font-size: 18px;
+  }
+
+  .average_header_main_text {
+    padding-top: 0px;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .time {
+    color: #8f8e8e;
+    font-size: 10px;
+  }
+  .average_heading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+  }
+}

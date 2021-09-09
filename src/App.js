@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./Home/Home";
+import "react-circular-progressbar/dist/styles.css";
+import { useState, createContext } from "react";
 
+export const ThemeContext = createContext({});
 function App() {
+
+  const [dark, setDark] = useState(true);
+
+  const toggleTheme = () => {
+        setDark(!dark)
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={{dark, setDark, toggleTheme}}>
+      <div
+        className={`container-fluid pb-5 px-4 ${
+          dark ? "darkTheme" : "lightTheme"
+        }`}
+      >
+        <Home />
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
